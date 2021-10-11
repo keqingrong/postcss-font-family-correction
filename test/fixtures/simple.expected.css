@@ -1,0 +1,14 @@
+.regular {
+  font-family: 'PingFang SC';
+  font-weight: 400;
+}
+
+.medium {
+  font-family: 'PingFang SC';
+  font-weight: 500;
+}
+
+.semibold {
+  font-family: 'PingFang SC';
+  font-weight: 600;
+}
