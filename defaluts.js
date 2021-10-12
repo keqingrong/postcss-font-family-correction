@@ -2,27 +2,27 @@
 module.exports = {
   mappings: {
     'PingFangSC-Ultralight': {
-      fontFamily: "'PingFang SC'",
+      fontFamily: "'PingFang SC', sans-serif",
       fontWeight: 100,
     },
     'PingFangSC-Thin': {
-      fontFamily: "'PingFang SC'",
+      fontFamily: "'PingFang SC', sans-serif",
       fontWeight: 200,
     },
     'PingFangSC-Light': {
-      fontFamily: "'PingFang SC'",
+      fontFamily: "'PingFang SC', sans-serif",
       fontWeight: 300,
     },
     'PingFangSC-Regular': {
-      fontFamily: "'PingFang SC'",
+      fontFamily: "'PingFang SC', sans-serif",
       fontWeight: 400,
     },
     'PingFangSC-Medium': {
-      fontFamily: "'PingFang SC'",
+      fontFamily: "'PingFang SC', sans-serif",
       fontWeight: 500,
     },
     'PingFangSC-Semibold': {
-      fontFamily: "'PingFang SC'",
+      fontFamily: "'PingFang SC', sans-serif",
       fontWeight: 600,
     },
   },
