@@ -1,6 +1,6 @@
 {
   "name": "postcss-font-family-correction",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A PostCSS plugin to correct font-family values",
   "keywords": [
     "postcss",
@@ -60,7 +60,10 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "coveragePathIgnorePatterns": ["/node_modules/", "defaluts.js"],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "defaluts.js"
+    ],
     "coverageThreshold": {
       "global": {
         "statements": 100
