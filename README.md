@@ -24,17 +24,17 @@ will be processed to:
 
 ```css
 .regular {
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC', sans-serif;
   font-weight: 400;
 }
 
 .medium {
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC', sans-serif;
   font-weight: 500;
 }
 
 .semibold {
-  font-family: "PingFang SC";
+  font-family: 'PingFang SC', sans-serif;
   font-weight: 600;
 }
 ```
@@ -66,3 +66,25 @@ module.exports = {
 ```
 
 [official docs]: https://github.com/postcss/postcss#usage
+
+## Options
+
+- `mappings`: `font-family` mappings
+- `preserveComments`: Preserve ignore comments
+- `clearFontFamily`: Clear `font-family` property
+- `overwriteFontWeight`: Overwrite `font-weight` property
+
+Example:
+
+```js
+module.exports = {
+  plugins: [
+    require('postcss-font-family-correction')({
+      mappings: {},
+      preserveComments: true,
+      clearFontFamily: false,
+      overwriteFontWeight: false,
+    }),
+  ]
+}
+```

@@ -24,13 +24,17 @@ module.exports = (options = {}) => {
           prev.type === 'comment' &&
           prev.text === ignoreNextComment
         ) {
-          prev.remove();
+          if (!opts.preserveComments) {
+            prev.remove();
+          }
           return;
         }
 
         const next = decl.next();
         if (next && next.type === 'comment' && next.text === ignoreComment) {
-          next.remove();
+          if (!opts.preserveComments) {
+            next.remove();
+          }
           return;
         }
 
@@ -48,8 +52,13 @@ module.exports = (options = {}) => {
               value: fontWeight,
             });
             decl.after(newDecl);
-            return;
+          } else if (opts.overwriteFontWeight) {
+            fontWeightDecl.value = fontWeight;
           }
+        }
+
+        if (opts.clearFontFamily) {
+          decl.remove();
         }
       },
     },

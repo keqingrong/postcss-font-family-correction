@@ -1,0 +1,13 @@
+.regular {
+  font-weight: 400;
+  font-family: PingFangSC-Regular;
+}
+
+.medium {
+  font-family: PingFangSC-Medium;
+}
+
+.semibold {
+  font-weight: 600;
+  font-family: PingFangSC-Semibold;
+}

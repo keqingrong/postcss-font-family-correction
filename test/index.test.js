@@ -34,5 +34,20 @@ test('Mixed case', async () => {
 
 test('Ignore case', async () => {
   const res = getFixtures('ignore');
-  await run(res.source, res.expected, {});
+  await run(res.source, res.expected, { preserveComments: false });
+});
+
+test('Preserve ignore case', async () => {
+  const res = getFixtures('preserve-ignore');
+  await run(res.source, res.expected, { preserveComments: true });
+});
+
+test('Clear font-family case', async () => {
+  const res = getFixtures('clear-font-family');
+  await run(res.source, res.expected, { clearFontFamily: true });
+});
+
+test('Overwrite font-weight case', async () => {
+  const res = getFixtures('overwrite-font-weight');
+  await run(res.source, res.expected, { overwriteFontWeight: true });
 });

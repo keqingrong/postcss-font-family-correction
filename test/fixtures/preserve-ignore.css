@@ -1,0 +1,12 @@
+.regular {
+  /* font-family-correction-ignore-next */
+  font-family: PingFangSC-Regular;
+}
+
+.medium {
+  font-family: PingFangSC-Medium;
+}
+
+.semibold {
+  font-family: PingFangSC-Semibold; /* font-family-correction-ignore */
+}

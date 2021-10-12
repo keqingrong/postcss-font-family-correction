@@ -6,7 +6,7 @@ declare namespace plugin {
 
   interface Options {
     /**
-     * font-family mappings
+     * `font-family` mappings
      */
     mappings?:
       | {
@@ -14,6 +14,18 @@ declare namespace plugin {
           fontWeight: FontWeight;
         }
       | [FontFamily, FontWeight];
+    /**
+     * Preserve ignore comments
+     */
+    preserveComments?: boolean;
+    /**
+     * Clear `font-family` property
+     */
+    clearFontFamily?: boolean;
+    /**
+     * Overwrite `font-weight` property
+     */
+    overwriteFontWeight?: boolean;
   }
 
   type Plugin = PluginCreator<Options>;

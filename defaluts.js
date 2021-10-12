@@ -26,4 +26,7 @@ module.exports = {
       fontWeight: 600,
     },
   },
+  preserveComments: true,
+  clearFontFamily: false,
+  overwriteFontWeight: false,
 };
