@@ -37,19 +37,19 @@ module.exports = (options = {}) => {
         const { fontFamily, fontWeight } = mapping;
         decl.value = fontFamily;
 
-        if (!fontWeight) {
-          return;
-        }
-
-        const { nodes = [] } = decl.parent;
-        const fontWeightDecl = nodes.find(decl => decl.prop === 'font-weight');
-        if (!fontWeightDecl) {
-          const newDecl = decl.clone({
-            prop: 'font-weight',
-            value: fontWeight,
-          });
-          decl.after(newDecl);
-          return;
+        if (fontWeight) {
+          const { nodes = [] } = decl.parent;
+          const fontWeightDecl = nodes.find(
+            decl => decl.prop === 'font-weight'
+          );
+          if (!fontWeightDecl) {
+            const newDecl = decl.clone({
+              prop: 'font-weight',
+              value: fontWeight,
+            });
+            decl.after(newDecl);
+            return;
+          }
         }
       },
     },
