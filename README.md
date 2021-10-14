@@ -72,7 +72,7 @@ module.exports = {
 - `mappings`: `font-family` mappings
 - `preserveComments`: Preserve ignore comments
 - `clearFontFamily`: Clear `font-family` property
-- `overwriteFontWeight`: Overwrite `font-weight` property
+- `overwriteFontWeight`: Overwrite existing `font-weight` property
 
 Example:
 
@@ -86,5 +86,61 @@ module.exports = {
       overwriteFontWeight: false,
     }),
   ]
+}
+```
+
+### `mappings`
+
+Object format:
+
+```js
+postcss([
+  require('postcss-font-family-correction')({
+    mappings: {
+      'PingFangSC-Regular': {
+        fontFamily: 'PingFang SC',
+        fontWeight: 400
+      },
+      'PingFangSC-Medium': {
+        fontFamily: 'PingFang SC',
+        fontWeight: 500
+      },
+      'PingFangSC-Semibold': {
+        fontFamily: 'PingFang SC',
+        fontWeight: 600
+      }
+    }
+  })
+]);
+```
+
+Array format:
+
+```js
+postcss([
+  require('postcss-font-family-correction')({
+    mappings: {
+      'PingFangSC-Regular': ['PingFang SC', 400],
+      'PingFangSC-Medium': ['PingFang SC', 500],
+      'PingFangSC-Semibold': ['PingFang SC', 600]
+    }
+  })
+]);
+```
+
+### `preserveComments`
+
+```css
+.regular {
+  /* font-family-correction-ignore-next */
+  font-family: PingFangSC-Regular;
+}
+
+.medium {
+  font-family: PingFangSC-Medium;
+}
+
+.semibold {
+  font-family: PingFangSC-Semibold; /* font-family-correction-ignore */
 }
 ```
