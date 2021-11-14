@@ -1,6 +1,6 @@
 {
   "name": "postcss-font-family-correction",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A PostCSS plugin to correct font-family values",
   "keywords": [
     "postcss",
